@@ -1,0 +1,57 @@
+{
+  "name": "minimize-json",
+  "description": "Minimize your JSON files without making a bundle",
+  "author": {
+    "name": "Lorenzo Pichilli",
+    "email": "pichillilorenzo@gmail.com",
+    "url": "https://github.com/pichillilorenzo"
+  },
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "bin": {
+    "minimize-json": "lib/index.js"
+  },
+  "files": [
+    "lib",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "watch": "tsc --watch",
+    "postbuild": "minimize-js ./lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pichillilorenzo/minimize-json.git"
+  },
+  "keywords": [
+    "minimize-json",
+    "minimize",
+    "minify",
+    "minify-json",
+    "json"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pichillilorenzo/minimize-json/issues"
+  },
+  "homepage": "https://github.com/pichillilorenzo/minimize-json#readme",
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.11",
+    "typescript": "^4.5.2",
+    "minimize-js": "^1.3.0"
+  },
+  "dependencies": {
+    "commander": "^8.3.0",
+    "glob": "^7.2.0",
+    "pretty-bytes": "^5.6.0",
+    "progress-barjs": "^2.2.1",
+    "tslib": "^2.3.1"
+  }
+}
